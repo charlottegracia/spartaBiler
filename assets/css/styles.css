@@ -1,0 +1,124 @@
+:root {
+    --white: rgba(242, 242, 242, 0.75);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--white);
+    font-family: 'Open Sans', sans-serif;
+}
+
+p {
+    hyphens: auto;
+}
+
+header {
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+header p {
+/*     font-family: 'Nothing You Could Do', cursive; */
+    margin: 0;
+    padding: 0;
+}
+
+.navFlex {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+header nav ul li {
+    list-style-type: none;
+}
+
+.navFlex a {
+    margin-left: 5vw;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--darkbrown);
+}
+
+.navFlex a:hover {
+    text-decoration: underline;
+}
+
+#navIkon {
+    display: none;
+}
+
+#navIkon2 {
+    display: none;
+    font-size: 35px;
+}
+
+.dropdownMobile {
+    font-size: 25px;
+    display: hidden;
+}
+
+.dropdownMobile li {
+    padding: 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--darkbrown);
+    display: hidden;
+}
+
+.dropdownMobile li:hover {
+    text-decoration: underline;
+}
+
+#navMobile {
+    display: none;
+    color: none;
+}
+
+@media screen and (max-width: 812px) {
+    .navFlex {
+        display: none;
+    }
+
+    #navMobile {
+        display: none;
+        color: var(--darkbrown);
+    }
+
+    #navIkon {
+        font-size: 25px;
+        display: block;
+    }
+}
+
+@media screen and (min-width: 813px) and (max-width: 1200px) {
+    .navFlex {
+        display: none;
+    }
+
+    #navMobile {
+        display: none;
+    }
+
+    #navIkon {
+        font-size: 27px;
+        display: block;
+    }
+}
+
+footer {
+    background-color: peachpuff;
+    text-align: center;
+}
