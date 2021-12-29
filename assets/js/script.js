@@ -1,13 +1,21 @@
 header();
 footer();
 
+if(document.querySelector('.frontpage')) {
+    let header = document.querySelector('header');
+    header.style.position = "fixed";
+    header.style.left = "0";
+    header.style.top = "0";
+    header.style.zIndex = "2";
+}
+
 function header() {
     let text = `
-            <nav class="opensans">
+            <nav>
                 <ul>
                     <li>
                         <a href="index.html">
-                            nav1
+                            <img src="/assets/images/Sparta_logo.png" alt="Sparta Biler">
                         </a>
                     </li>
                     <section class="navFlex">
@@ -70,7 +78,7 @@ function footer() {
     let text = `
     <h2>footer</h2>
     `;
-    document.querySelector('footer').innerHTML = text;
+    document.querySelector('footer').innerHTML += text;
 }
 
 window.onscroll = function() {onScrollChecks()};

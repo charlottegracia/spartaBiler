@@ -1,5 +1,21 @@
 :root {
-    --white: rgba(242, 242, 242, 0.75);
+    --red: #FF2F2F;
+	--blue: #0F2F56;
+    --white: #FFFFFF;
+	--grey: #F5F5F5;
+    --darkred: #AC2D2D;
+    --lowOpacityWhite: rgba(255, 255, 255, 0.500);
+    --black: #000000;
+}
+
+@font-face {
+    font-family: Audiowide;
+    src: url('../Audiowide-Regular.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url('../Raleway-VariableFont_wght.ttf') format("truetype");
 }
 
 html {
@@ -20,22 +36,13 @@ header {
     padding: 0;
 }
 
+header nav {
+    margin: 0 80px;
+}
+
 header nav ul {
     padding: 0;
     margin: 0;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    flex-direction: row;
-}
-
-header p {
-/*     font-family: 'Nothing You Could Do', cursive; */
-    margin: 0;
-    padding: 0;
-}
-
-.navFlex {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -43,6 +50,17 @@ header p {
 
 header nav ul li {
     list-style-type: none;
+}
+
+header nav ul li a img {
+    width: 15vw;
+}
+
+.navFlex {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
 }
 
 .navFlex a {
@@ -118,39 +136,91 @@ header nav ul li {
     }
 }
 
-footer {
-    background-color: peachpuff;
-    text-align: center;
-}
+/* FRONTPAGE */
 
+
+/* SVG */
 svg {
     width: 150px;
     overflow: hidden;
 }
 
-#illustration{
-	position: absolute;
-	left: 1vw;
-	animation-name: animate;
-	animation-duration: 10s;
-	animation-fill-mode: both;
-	animation-play-state: paused;
+#illustration {
+    position: absolute;
+    left: 1vw;
+    animation-name: animate;
+    animation-duration: 10s;
+    animation-fill-mode: both;
+    animation-play-state: paused;
+}
+
+main section {
+    margin: 100px 0 0 0;
+    height: 100vh;
+	width: 100vw;
 }
 
 
 @keyframes animate {
-	0% {
-		transform: translateX(0vw);
-		opacity: 1;
-	}
-	100% {
-		transform: translateX(100vw);
-		opacity: 1;
-	}
+    0% {
+        transform: translateX(0vw);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(100vw);
+        opacity: 1;
+    }
 }
 
-.hero {
-    height: 100vh;
-    background-image: url("../images/miso.jpg");
-    background-position: center;
+/* FOOTER */
+footer {
+    background-color: white;
+    text-align: center;
+}
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+}
+
+.frontpage .text {
+    margin: 0 100px;
+    position: fixed;
+    top: 25vh;
+    color: whitesmoke;
+}
+
+.frontpage h1 {
+    font-family: "Audiowide", Verdana, Tahoma;
+    font-size: 80px;
+    margin: 0;
+}
+
+.frontpage p {
+    font-family: "Raleway", Verdana, Tahoma;
+    font-size: 20px;
+    width: 300px;
+    line-height: 2;
+}
+
+header {
+    height: 60px;
+    width: 100%;
+    display: block;
+    background: var(--lowOpacityWhite);
+
+}
+
+button {
+    background-color: var(--red);
+    color: whitesmoke;
+    padding: 20px 50px;
+    margin: 30px 0;
+    border-radius: 50px;
+    border: none;
 }
