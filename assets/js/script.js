@@ -72,3 +72,10 @@ function footer() {
     `;
     document.querySelector('footer').innerHTML = text;
 }
+
+window.onscroll = function() {onScrollChecks()};
+		
+function onScrollChecks() {
+        let illustration = document.querySelector('#illustration');
+        illustration.style.animationPlayState = "running";
+};	
