@@ -76,7 +76,22 @@ function dropdownMobile() {
 
 function footer() {
     let text = `
-    <h2>footer</h2>
+    <section class="flex">
+            <section>
+                <p class="bold">Tlf. 61 46 46 85</p>
+                <p>info@spartabiler.dk</p>
+            </section>
+            <section>
+                <h2>Skriv til os og hør, hvad vi kan tilbyde</h2>
+                <button>Send en email</button>
+            </section>
+            <section>
+                <p class="bold">Adresse:</p>
+                <p>Gladsaxe Møllevej 21</p>
+                <p>2860 Søborg</p>
+            </section>
+        </section>
+    <h2>ikoner</h2>
     `;
     document.querySelector('footer').innerHTML += text;
 }
