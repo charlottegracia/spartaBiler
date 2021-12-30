@@ -83,7 +83,9 @@ function footer() {
             </section>
             <section>
                 <h2 class="bold">Skriv til os og hør, hvad vi kan tilbyde</h2>
-                <button>Send en email</button>
+                <a href="mailto:info@spartabiler.dk">
+                    <button>Send en email</button>
+                </a>
             </section>
             <section>
                 <p class="bold">Adresse:</p>

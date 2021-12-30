@@ -40,6 +40,8 @@ html {
 body {
     background-color: var(--white);
     font-family: "Raleway Regular", Verdana, Tahoma;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 p {
@@ -65,6 +67,8 @@ header {
     width: 100%;
     display: block;
     background: var(--lowOpacityWhite);
+    position: sticky;
+    top: 0;
 }
 
 header nav {
@@ -235,7 +239,7 @@ header nav ul li a img {
 }
 
 .frontpage button {
-    background-color: var(--red);
+    background-color: var(--darkred);
     color: whitesmoke;
     padding: 20px 50px;
     margin: 30px 0;
@@ -246,13 +250,12 @@ header nav ul li a img {
 }
 
 .frontpage button:hover {
-    background-color: var(--darkred);
+    background-color: var(--red);
 }
 
 /* SVG */
 svg {
     width: 800px;
-    overflow: hidden;
 }
 
 #illustration {
@@ -311,6 +314,12 @@ footer button {
     color: var(--white);
     border: none;
     border-radius: 40px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+footer button:hover {
+    background-color: var(--red);
 }
 
 /* BACKGROUND */
