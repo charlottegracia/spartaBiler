@@ -11,7 +11,7 @@ if(document.querySelector('.frontpage')) {
 
 function header() {
     let text = `
-            <nav>
+            <nav class="bold">
                 <ul>
                     <li>
                         <a href="index.html">
@@ -91,9 +91,18 @@ function footer() {
                 <p>2860 Søborg</p>
             </section>
         </section>
-    <h2>ikoner</h2>
+    <section class="icons">
+        <a href="https://www.facebook.com/Spartabiler.dk" target="_blank">
+            <img src="/assets/images/facebook.png" alt="Sparta Biler Facebook"> <!-- flaticon: https://www.flaticon.com/premium-icon/facebook_2504903 -->
+        </a>
+        <a href="https://www.instagram.com/spartabiler" target="_blank">
+            <img src="/assets/images/instagram.png" alt="Sparta Biler Instagram"> <!-- flaticon: https://www.flaticon.com/free-icon/instagram_2111463 -->
+        </a>
+    </section>
     `;
-    document.querySelector('footer').innerHTML += text;
+    if (document.querySelector('footer')) {
+        document.querySelector('footer').innerHTML += text;
+    }
 }
 
 window.onscroll = function() {onScrollChecks()};

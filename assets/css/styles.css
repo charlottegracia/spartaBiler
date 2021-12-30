@@ -14,8 +14,13 @@
 }
 
 @font-face {
-    font-family: Raleway;
-    src: url('../Raleway-VariableFont_wght.ttf') format("truetype");
+    font-family: Raleway Regular;
+    src: url('../Raleway-Regular.ttf') format("truetype");
+}
+
+@font-face {
+    font-family: Raleway Bold;
+    src: url('../Raleway-Bold.ttf') format("truetype");
 }
 
 html {
@@ -24,7 +29,7 @@ html {
 
 body {
     background-color: var(--white);
-    font-family: "Raleway", Verdana, Tahoma;
+    font-family: "Raleway Regular", Verdana, Tahoma;
 }
 
 p {
@@ -32,7 +37,7 @@ p {
 }
 
 .bold {
-    font-weight: bold;
+    font-family: "Raleway Bold", Verdana, Tahoma;
 }
 
 header {
@@ -205,6 +210,12 @@ footer .flex section:nth-child(3) p {
     margin: 10px 0;
 }
 
+footer .icons img {
+    width: 40px;
+    height: 40px;
+    margin: 10px 25px;
+}
+
 #myVideo {
     position: fixed;
     right: 0;
@@ -256,7 +267,7 @@ button:hover {
     background-color: var(--darkred);
 }
 
-.icons {
+.frontpage .icons {
     color: var(--lowOpacityWhite);
     font-size: 40px;
     display: flex;
@@ -267,11 +278,28 @@ button:hover {
     z-index: 3;
 }
 
-.icons i {
+.frontpage .icons a {
+    text-decoration: none;
+    color: var(--lowOpacityWhite);
+}
+
+.frontpage .icons i {
     margin: 0 0 0 20px;
     transition: 1s;
 }
 
-.icons i:hover {
+.frontpage .icons i:hover {
     color: var(--white);
+}
+
+.frontpage .icons img {
+    width: 40px;
+    height: 40px;
+    margin: 0 0 0 20px;
+    opacity: 0.5;
+    transition: 1s;
+}
+
+.frontpage .icons img:hover {
+    opacity: 1;
 }
