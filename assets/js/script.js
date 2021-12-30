@@ -110,6 +110,11 @@ if(document.getElementById('illustration')) {
 }
 		
 function onScrollChecks() {
-    let illustration = document.querySelector('#illustration');
-    illustration.style.animationPlayState = "running";
-};	
+        let illustration = document.querySelector('#illustration');
+
+        if(window.pageYOffset >= illustration.offsetTop - (illustration.offsetHeight)) {
+            let tmpX = -0.5*(window.pageYOffset-illustration.offsetTop);
+            illustration.style.transform="translateX("+ tmpX + "px)";
+        }
+
+};		

@@ -4,7 +4,7 @@
     --white: #FFFFFF;
 	--grey: #F5F5F5;
     --darkred: #AC2D2D;
-    --lowOpacityWhite: rgba(255, 255, 255, 0.500);
+    --lowOpacityWhite: rgba(255, 255, 255, 0.600);
     --black: #000000;
 }
 
@@ -203,7 +203,7 @@ header nav ul li a img {
     display: flex;
     flex-direction: row;
     position: fixed;
-    top: 75vh;
+    top: 90vh;
     left: 78vw;
     z-index: 3;
 }
@@ -226,7 +226,7 @@ header nav ul li a img {
     width: 40px;
     height: 40px;
     margin: 0 0 0 20px;
-    opacity: 0.5;
+    opacity: 0.6;
     transition: 1s;
 }
 
@@ -251,25 +251,14 @@ header nav ul li a img {
 
 /* SVG */
 svg {
-    width: 150px;
+    width: 600px;
     overflow: hidden;
 }
 
 #illustration {
     position: absolute;
-    left: 1vw;
-    animation-name: animate;
-    animation-duration: 10s;
-    animation-fill-mode: both;
-    animation-play-state: paused;
+    right: 5vw;
 }
-
-/* main section {
-    margin: 100px 0 0 0;
-    height: 100vh;
-	width: 100vw;
-} */
-
 
 @keyframes animate {
     0% {
@@ -336,15 +325,26 @@ footer button {
 }
 
 /* BACKGROUND */
-.contact .background {
-    background-image: url('/assets/images/kort.png');
-}
 .background {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 40vh;
 }
+
+.contact .background {
+    background-image: url('/assets/images/kort.png');
+}
+
+.leasing .background {
+    background-image: url('/assets/images/leasing.png');
+    background-position: 0% 30%;
+}
+
+.cars .background {
+    background-image: url('/assets/images/miso.JPG');
+}
+
 
 /* CONTACT */
 .contact main {
