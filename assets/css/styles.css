@@ -46,6 +46,7 @@ body {
 
 p {
     hyphens: auto;
+    line-height: 2;
 }
 
 .bold {
@@ -343,6 +344,10 @@ footer button:hover {
     background-image: url('/assets/images/miso.JPG');
 }
 
+.car .background {
+    background-image: url('/assets/images/miso.JPG');
+}
+
 
 /* CONTACT */
 .contact main {
@@ -422,4 +427,90 @@ footer button:hover {
 .owners section {
     display: flex;
     flex-direction: column;
+}
+
+/* CAR */
+.car main {
+    margin: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-100px);
+}
+
+.car .title {
+    background-color: var(--darkred);
+    color: var(--white);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.car a {
+    text-decoration: none;
+    color: var(--black);
+    padding: 25px 0;
+}
+
+.car main .grid {
+    display: grid;
+    gap: 25px 50px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    margin-bottom: -120px;
+}
+
+.car main .grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.car .details section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.car .details section p:nth-child(2) {
+    text-align: right;
+}
+
+.car .grid button {
+    background-color: var(--darkred);
+    margin: 20px 0;
+    padding: 20px;
+    color: var(--white);
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.car .grid button:hover {
+    background-color: var(--red);
+}
+
+.car .details section p {
+    margin: 0;
+}
+
+.car main .grid .extras {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 25px;
+    line-height: 2;
+    border-radius: 5px;
+}
+
+.car main .grid .extras h2 {
+    margin: 0;
+}
+
+.car main .grid .extras ul {
+    padding: 0 20px;
+}
+
+.car .grey {
+    font-size: 14px;
+    color: grey;
 }
