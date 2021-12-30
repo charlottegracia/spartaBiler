@@ -78,17 +78,17 @@ function footer() {
     let text = `
     <section class="flex">
             <section>
-                <p class="bold">Tlf. 61 46 46 85</p>
+                <p class="bold">Tlf. <span class="robotobold">61 46 46 85</span></p>
                 <p>info@spartabiler.dk</p>
             </section>
             <section>
-                <h2>Skriv til os og hør, hvad vi kan tilbyde</h2>
+                <h2 class="bold">Skriv til os og hør, hvad vi kan tilbyde</h2>
                 <button>Send en email</button>
             </section>
             <section>
                 <p class="bold">Adresse:</p>
-                <p>Gladsaxe Møllevej 21</p>
-                <p>2860 Søborg</p>
+                <p>Gladsaxe Møllevej <span class="robotolight">21</span></p>
+                <p><span class="robotolight">2860</span> Søborg</p>
             </section>
         </section>
     <section class="icons">
@@ -101,13 +101,15 @@ function footer() {
     </section>
     `;
     if (document.querySelector('footer')) {
-        document.querySelector('footer').innerHTML += text;
+        document.querySelector('footer').innerHTML = text;
     }
 }
 
-window.onscroll = function() {onScrollChecks()};
+if(document.getElementById('illustration')) {
+    window.onscroll = function() {onScrollChecks()};
+}
 		
 function onScrollChecks() {
-        let illustration = document.querySelector('#illustration');
-        illustration.style.animationPlayState = "running";
+    let illustration = document.querySelector('#illustration');
+    illustration.style.animationPlayState = "running";
 };	
