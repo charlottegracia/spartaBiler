@@ -112,9 +112,11 @@ if(document.getElementById('illustration')) {
 function onScrollChecks() {
         let illustration = document.querySelector('#illustration');
 
-        if(window.pageYOffset >= illustration.offsetTop - (illustration.offsetHeight)) {
-            let tmpX = -0.5*(window.pageYOffset-illustration.offsetTop);
-            illustration.style.transform="translateX("+ tmpX + "px)";
+        if(window.pageYOffset >= illustration.offsetTop - (illustration.offsetHeight*2) ) {
+            let tmpX = -1*(window.pageYOffset-illustration.offsetTop);
+            if(tmpX >= 10) {
+                illustration.style.transform="translateX("+ tmpX + "px)";
+            }
         }
 
 };		
