@@ -425,3 +425,59 @@ footer button {
     display: flex;
     flex-direction: column;
 }
+
+/* LEASING */
+
+.leasingGrid {
+    margin: 50px 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr;
+    gap: 25px;
+    grid-template-areas: 
+    "header div2"
+    "div1 div2"
+    "div1 div3";
+}
+
+.leasingheader {grid-area: header;}
+.div1 {grid-area: div1;}
+.div2 {grid-area: div2;}
+.div3 {grid-area: div3;}
+
+
+.leasingHeader {
+    margin: 0;
+    padding: 0;
+    color: var(--blue);
+}
+
+.div1 {
+    margin: 0;
+    padding: 0;
+    width: 500px;
+    color: var(--blue);
+    line-height: 2;
+}
+
+.div2 {
+    margin: 0;
+    background-image: url(../images/miso.JPG);
+}
+
+.imgLeasing {
+    width: 500px;
+}
+
+.div3 {
+    margin: 0;
+    padding: 20px;
+    background-color: var(--blue);
+    color: var(--white);
+    height: 300px;
+    width: 100%;
+    line-height: 2;
+    border-radius: 5px;
+}
+
+
