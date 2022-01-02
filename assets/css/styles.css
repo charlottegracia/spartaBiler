@@ -1,36 +1,23 @@
+/*
+Theme Name: Sparta Biler
+Theme URI: google.com
+Description: Custom Theme for Sparta Biler made by Group 7 for MMD3 exam
+Version: 1.0
+Author: Charlotte Gracia
+Author URI: charlottegracia.dk
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Raleway:wght@400;700&family=Roboto:wght@300;700&display=swap');
+
 :root {
     --red: #FF2F2F;
 	--blue: #0F2F56;
     --white: #FFFFFF;
 	--grey: #F5F5F5;
+    --darkgrey: #616161;
     --darkred: #AC2D2D;
     --lowOpacityWhite: rgba(255, 255, 255, 0.600);
     --black: #000000;
-}
-
-@font-face {
-    font-family: Audiowide;
-    src: url('../Audiowide-Regular.ttf') format("truetype");
-}
-
-@font-face {
-    font-family: Raleway Regular;
-    src: url('../Raleway-Regular.ttf') format("truetype");
-}
-
-@font-face {
-    font-family: Raleway Bold;
-    src: url('../Raleway-Bold.ttf') format("truetype");
-}
-
-@font-face {
-    font-family: Roboto Light;
-    src: url('../Roboto-Light.ttf') format("truetype");
-}
-
-@font-face {
-    font-family: Roboto Bold;
-    src: url('../Roboto-Bold.ttf') format("truetype");
 }
 
 html {
@@ -39,7 +26,7 @@ html {
 
 body {
     background-color: var(--white);
-    font-family: "Raleway Regular", Verdana, Tahoma;
+    font-family: 'Raleway', sans-serif;
     width: 100%;
     overflow-x: hidden;
 }
@@ -50,15 +37,18 @@ p {
 }
 
 .bold {
-    font-family: "Raleway Bold", Verdana, Tahoma;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
 }
 
 .robotolight {
-    font-family: "Roboto Light", Verdana, Tahoma;
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter;
 }
 
 .robotobold {
-    font-family: "Roboto Bold", Verdana, Tahoma;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
 }
 
 header {
@@ -191,7 +181,7 @@ header nav ul li a img {
 }
 
 .frontpage h1 {
-    font-family: "Audiowide", Verdana, Tahoma;
+    font-family: 'Audiowide', cursive;
     font-size: 80px;
     margin: 0;
 }
@@ -449,6 +439,10 @@ footer button:hover {
     text-decoration: none;
     color: var(--black);
     padding: 25px 0;
+}
+
+.car h4, .car h5 {
+    color: var(--darkgrey);
 }
 
 .car main .grid {
