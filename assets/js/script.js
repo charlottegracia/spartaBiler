@@ -77,20 +77,22 @@ function dropdownMobile() {
 function footer() {
     let text = `
     <section class="flex">
-            <section>
-                <p class="bold">Tlf. <span class="robotobold">61 46 46 85</span></p>
-                <p>info@spartabiler.dk</p>
-            </section>
-            <section>
-                <h2 class="bold">Skriv til os og hør, hvad vi kan tilbyde</h2>
-                <button>Send en email</button>
-            </section>
-            <section>
-                <p class="bold">Adresse:</p>
-                <p>Gladsaxe Møllevej <span class="robotolight">21</span></p>
-                <p><span class="robotolight">2860</span> Søborg</p>
-            </section>
+        <section>
+            <p class="bold">Tlf. <span class="robotobold">61 46 46 85</span></p>
+            <p>info@spartabiler.dk</p>
         </section>
+        <section>
+            <h2 class="bold">Skriv til os og hør, hvad vi kan tilbyde</h2>
+            <a href="mailto:info@spartabiler.dk">
+                <button>Send en email</button>
+            </a>
+        </section>
+        <section>
+            <p class="bold">Adresse:</p>
+            <p>Gladsaxe Møllevej <span class="robotolight">21</span></p>
+            <p><span class="robotolight">2860</span> Søborg</p>
+        </section>
+    </section>
     <section class="icons">
         <a href="https://www.facebook.com/Spartabiler.dk" target="_blank">
             <img src="/assets/images/facebook.png" alt="Sparta Biler Facebook"> <!-- flaticon: https://www.flaticon.com/premium-icon/facebook_2504903 -->
@@ -112,9 +114,11 @@ if(document.getElementById('illustration')) {
 function onScrollChecks() {
         let illustration = document.querySelector('#illustration');
 
-        if(window.pageYOffset >= illustration.offsetTop - (illustration.offsetHeight)) {
-            let tmpX = -0.5*(window.pageYOffset-illustration.offsetTop);
-            illustration.style.transform="translateX("+ tmpX + "px)";
+        if(window.pageYOffset >= illustration.offsetTop - (illustration.offsetHeight*2) ) {
+            let tmpX = -1*(window.pageYOffset-illustration.offsetTop);
+            if(tmpX >= 10) {
+                illustration.style.transform="translateX("+ tmpX + "px)";
+            }
         }
 
 };		
