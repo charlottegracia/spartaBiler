@@ -643,22 +643,23 @@ footer button:hover {
     padding: 25px 0;
 }
 
-.car h4, .car h4 {
-    color: var(--darkgrey);
+.car h3 {
+    color: var(--blue);
+    font-size: 25px;
+    margin-top: 0;
+}
+
+.car h4 {
+    color: var(--blue);
+    margin-bottom: 10px;
 }
 
 .car main .grid {
     display: grid;
-    gap: 25px 50px;
+    gap: 25px 25px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     margin-bottom: -120px;
-}
-
-.car main .grid img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 
 .car .details section {
@@ -684,7 +685,7 @@ footer button:hover {
 .car .details section img {
     width: 20px;
     height: 20px;
-    padding: 0 15px 0 0;
+    padding: 0 10px 0 0;
 }
 
 .car .details section p:nth-child(2) {
@@ -730,4 +731,27 @@ footer button:hover {
 .car .grey {
     font-size: 14px;
     color: grey;
+}
+
+.mySlides { /* Kilde: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_self */
+    display: none;
+    width: 100%;
+    height: 76vh;
+    object-fit: cover;
+}
+
+.firstPic {
+    display: block;
+}
+
+.slideshowGrid {
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+}
+
+.ikon {
+    color: var(--blue);
+    margin: auto;
+    font-size: 30px;
+    z-index: 100;
 }
