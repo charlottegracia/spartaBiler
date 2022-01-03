@@ -107,18 +107,18 @@ function footer() {
     }
 }
 
-if(document.getElementById('illustration')) {
+if(document.getElementById('illustration4')) {
     window.onscroll = function() {onScrollChecks()};
 }
 		
 function onScrollChecks() {
-        let illustration = document.querySelector('#illustration');
+        let illustration4 = document.querySelector('#illustration4');
         let illustration2 = document.querySelector('#illustration2');
 
-        if(window.pageYOffset >= illustration.offsetTop - (illustration.offsetHeight*2) ) {
-            let tmpX = -1*(window.pageYOffset-illustration.offsetTop);
+        if(window.pageYOffset >= illustration4.offsetTop - (illustration4.offsetHeight*2) ) {
+            let tmpX = -1*(window.pageYOffset-illustration4.offsetTop);
             if(tmpX >= 10) {
-                illustration.style.transform="translateX("+ tmpX + "px)";
+                illustration4.style.transform="translateX("+ tmpX + "px)";
             }
         }
 
