@@ -36,6 +36,10 @@ p {
     line-height: 2;
 }
 
+main {
+    margin: 50px 100px;
+}
+
 .bold {
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
@@ -245,11 +249,8 @@ header nav ul li a img {
 }
 
 /* SVG */
-svg {
-    width: 800px;
-}
-
 #illustration {
+    width: 800px;
     padding-top: 50px;
     position: absolute;
     transform: translateX(50vw);
@@ -363,6 +364,8 @@ footer button:hover {
 .contact main article h1 {
     margin: 0;
     color: var(--blue);
+    font-weight: lighter;
+    font-size: 40px;
 }
 
 .contact main article:nth-child(2) {
@@ -420,19 +423,109 @@ footer button:hover {
 }
 
 /* LEASING */
+.leasingflex {
+    margin-bottom: -50px;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(-100px);
+    gap: 25px;
+}
 
 .leasingGrid {
-    margin: 50px 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 25px;
     line-height: 2;
-/*     grid-template-areas: 
-    "header div2"
-    "div1 div2"
-    "div1 div3"; */
 }
+
+.leasingGrid h1 {
+    color: var(--blue);
+    margin: 0;
+    padding: 0;
+    font-weight: lighter;
+    font-size: 40px;
+}
+
+.leasingGrid h2 {
+    color: var(--blue);
+    margin: 0;
+    padding: 0;
+}
+
+.leasingGrid article:nth-child(2) {
+    gap: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.leasingGrid article:nth-child(2) section:nth-child(2) {
+    margin: 0;
+    padding: 20px;
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+.leasingGrid article:nth-child(2) section:nth-child(2) h2 {
+    padding: 0;
+    margin: 0;
+    color: var(--white);
+}
+
+.leasing .options {
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    text-align: center;
+    background-color: var(--darkred);
+}
+
+.leasing .options h3 {
+    margin: 0;
+    font-size: 16px;
+    padding: 40px;
+    width: 33%;
+    background-color: var(--darkred);
+    color: var(--white);
+    border-radius: 10px 10px 0 0;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.leasing .options h3:hover {
+    background-color: var(--red);
+}
+
+.leasing .options .open {
+    background-color: var(--white);
+    color: var(--blue);
+    border-radius: 10px 10px 0 0;
+}
+
+.leasing .options .open:hover {
+    background-color: var(--white);
+    color: var(--blue);
+    border-radius: 10px 10px 0 0;
+    cursor: default;
+}
+
+#privatleasing {
+    display: flex;
+}
+
+#erhvervsleasing {
+    display: none;
+}
+
+#splitleasing {
+    display: none;
+}
+
+/* #illustration2 {
+    padding-top: 50px;
+    position: absolute;
+    transform: translateX(50vw);
+} */
 
 /* CARS */
 
@@ -513,7 +606,6 @@ footer button:hover {
 
 /* CAR */
 .car main {
-    margin: 50px 100px;
     display: flex;
     flex-direction: column;
     transform: translateY(-100px);
@@ -551,31 +643,6 @@ footer button:hover {
     object-fit: cover;
 }
 
-
-.leasingHeader {
-    margin: 0;
-    padding: 0;
-    color: var(--blue);
-}
-
-.div1 {
-    margin: 0;
-    padding: 0;
-    color: var(--blue);
-    line-height: 2;
-}
-
-.imgLeasing {
-    width: 500px;
-}
-
-.leasingGrid section:nth-child(2) section:nth-child(2) {
-    margin: 0;
-    padding: 20px;
-    background-color: var(--blue);
-    color: var(--white);
-}
-
 .car .details section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -611,11 +678,6 @@ footer button:hover {
     padding: 25px;
     line-height: 2;
     border-radius: 5px;
-}
-
-.leasingGrid section:nth-child(2) section:nth-child(2) h2 {
-    padding: 0;
-    margin: 0;
 }
 
 .car main .grid .extras h2 {

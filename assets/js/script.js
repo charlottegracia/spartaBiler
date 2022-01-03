@@ -113,6 +113,7 @@ if(document.getElementById('illustration')) {
 		
 function onScrollChecks() {
         let illustration = document.querySelector('#illustration');
+        let illustration2 = document.querySelector('#illustration2');
 
         if(window.pageYOffset >= illustration.offsetTop - (illustration.offsetHeight*2) ) {
             let tmpX = -1*(window.pageYOffset-illustration.offsetTop);
@@ -121,4 +122,27 @@ function onScrollChecks() {
             }
         }
 
-};		
+      /*   if(window.pageYOffset >= illustration2.offsetTop - (illustration2.offsetHeight*2) ) {
+            let tmpX = -1*(window.pageYOffset-illustration2.offsetTop);
+            if(tmpX >= 10) {
+                illustration2.style.transform="translateX("+ tmpX + "px)";
+            }
+        } */
+
+};
+
+function leasing(leasingtype) {
+    if (leasingtype == 'privatleasing') {
+        document.getElementById('privatleasing').style.display = "flex";
+        document.getElementById('erhvervsleasing').style.display = "none"
+        document.getElementById('splitleasing').style.display = "none"
+    } else if (leasingtype == 'erhvervsleasing') {
+        document.getElementById('privatleasing').style.display = "none";
+        document.getElementById('erhvervsleasing').style.display = "flex"
+        document.getElementById('splitleasing').style.display = "none"
+    } else if (leasingtype == 'splitleasing') {
+        document.getElementById('privatleasing').style.display = "none";
+        document.getElementById('erhvervsleasing').style.display = "none"
+        document.getElementById('splitleasing').style.display = "flex"
+    }
+}
