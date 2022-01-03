@@ -235,7 +235,8 @@ header nav ul li a img {
 
 .frontpage button {
     background-color: var(--darkred);
-    color: whitesmoke;
+    color: var(--white);
+    font-weight: bold;
     padding: 20px 50px;
     margin: 30px 0;
     border-radius: 40px;
@@ -536,6 +537,11 @@ footer button:hover {
 .cars main {
     transform: translateY(-100px);
     margin-bottom: -80px;
+}
+
+.cars a {
+    text-decoration: none;
+    color: var(--black);
 }
 
 .cars .options {
