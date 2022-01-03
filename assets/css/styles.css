@@ -64,6 +64,7 @@ header {
     background: var(--lowOpacityWhite);
     position: sticky;
     top: 0;
+    z-index: 100;
 }
 
 header nav {
@@ -642,7 +643,7 @@ footer button:hover {
     padding: 25px 0;
 }
 
-.car h4, .car h5 {
+.car h4, .car h4 {
     color: var(--darkgrey);
 }
 
@@ -664,6 +665,26 @@ footer button:hover {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
+}
+
+.car .details .icondetail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.car .details .icondetail section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.car .details section img {
+    width: 20px;
+    height: 20px;
+    padding: 0 15px 0 0;
 }
 
 .car .details section p:nth-child(2) {
@@ -695,6 +716,7 @@ footer button:hover {
     padding: 25px;
     line-height: 2;
     border-radius: 5px;
+    height: fit-content;
 }
 
 .car main .grid .extras h2 {
