@@ -419,6 +419,21 @@ footer button:hover {
     flex-direction: column;
 }
 
+/* LEASING */
+
+.leasingGrid {
+    margin: 50px 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 25px;
+    line-height: 2;
+/*     grid-template-areas: 
+    "header div2"
+    "div1 div2"
+    "div1 div3"; */
+}
+
 /* CARS */
 
 @media (min-width: 900px) {
@@ -536,6 +551,31 @@ footer button:hover {
     object-fit: cover;
 }
 
+
+.leasingHeader {
+    margin: 0;
+    padding: 0;
+    color: var(--blue);
+}
+
+.div1 {
+    margin: 0;
+    padding: 0;
+    color: var(--blue);
+    line-height: 2;
+}
+
+.imgLeasing {
+    width: 500px;
+}
+
+.leasingGrid section:nth-child(2) section:nth-child(2) {
+    margin: 0;
+    padding: 20px;
+    background-color: var(--blue);
+    color: var(--white);
+}
+
 .car .details section {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -571,6 +611,11 @@ footer button:hover {
     padding: 25px;
     line-height: 2;
     border-radius: 5px;
+}
+
+.leasingGrid section:nth-child(2) section:nth-child(2) h2 {
+    padding: 0;
+    margin: 0;
 }
 
 .car main .grid .extras h2 {
