@@ -348,7 +348,7 @@ footer button:hover {
 }
 
 /* CONTACT */
-.contact main { /* IDA */
+.contact main { 
     margin: 50px 100px;
     display: grid;
     gap: 25px;
@@ -438,7 +438,7 @@ footer button:hover {
     gap: 25px;
 }
 
-.leasingGrid { /* IDA */
+.leasingGrid {
     display: grid;
     grid-template-columns: 47% 47%;
     grid-template-rows: 1fr;
@@ -563,7 +563,7 @@ footer button:hover {
     transition: 1s;
 }
 
-.cars main .carGrid { /*IDA*/
+.cars main .carGrid { 
     margin: 25px 0;
     max-width: 1600px;
     display: grid;
@@ -670,7 +670,7 @@ footer button:hover {
     margin-top: 0;
 }
 
-.car main .grid { /*IDA*/
+.car main .grid { 
     display: grid;
     gap: 25px 25px;
     grid-template-columns: 1fr 1fr;
