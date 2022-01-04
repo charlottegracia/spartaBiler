@@ -56,27 +56,15 @@ main {
 }
 
 header {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    display: block;
     background: var(--lowOpacityWhite);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-}
-
-header nav {
-    margin: 0;
-    padding: 0px 80px;
 }
 
 header nav ul {
-    padding: 0;
+    padding: 0 50px;
     margin: 0;
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
+    align-items: center;
 }
 
 header nav ul li {
@@ -84,18 +72,17 @@ header nav ul li {
 }
 
 header nav ul li a img {
-    width: 20%;
+    height: 8vh;
 }
 
 .navFlex {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    align-items: center;
 }
 
 .navFlex a {
-    margin-left: 0;
+    margin-left: 5vw;
     text-decoration: none;
     text-transform: uppercase;
     color: var(--blue);
@@ -124,8 +111,12 @@ header nav ul li a img {
     padding: 20px 0;
     text-align: center;
     text-transform: uppercase;
-    color: var(--darkbrown);
     display: hidden;
+}
+
+.dropdownMobile li a {
+    color: var(--blue);
+    text-decoration: none;
 }
 
 .dropdownMobile li:hover {
@@ -137,24 +128,46 @@ header nav ul li a img {
     color: none;
 }
 
+.headericons {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 100px;
+}
+
+.headericons a {
+    list-style: none;
+    text-decoration: none;
+}
+
+.headericons img {
+    width: 40px;
+    height: 40px;
+}
+
+.nav-fade-in {
+    opacity: 0;
+    transition: opacity 1000ms ease-in;
+}
+
+.nav-fade-in.appear {
+    opacity: 1;
+}
+
+#navIkon2 {
+    padding-top: 15px;
+    color: var(--blue);
+}
+
 @media screen and (max-width: 812px) {
     main {
-        margin: 50px 50px;
+        margin: 30px;
     }
 
-    header nav {
-        margin: 20px;
-    }
-
-    header ul {
+    header nav ul {
+        padding: 0 20px 0 5px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        gap: 45%;
-    }
-    
-    header nav ul li a img {
-        width: 100%;
     }
 
     .navFlex {
@@ -182,9 +195,22 @@ header nav ul li a img {
     }
 
     #navIkon {
-        font-size: 27px;
+        font-size: 25px;
         display: block;
     }
+ 
+    header nav ul li a img {
+        width: 25%;
+        height: auto;
+    }
+
+    header nav ul {
+        padding: 0 5px 0 5px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
 }
 
 /* FRONTPAGE */
@@ -270,16 +296,16 @@ header nav ul li a img {
 
 @media screen and (max-width: 812px) {
     .frontpage h1 {
-        font-size: 9vw;
+        font-size: 10vw;
     }
     
     .frontpage p {
         font-size: 18px;
-        width: 380px;
+        width: 85vw;
     }
     
     .frontpage .icons {
-        left: 40vw;
+        left: 5vw;
     }
 
     .frontpage button {
@@ -399,6 +425,7 @@ footer button:hover {
     background-size: cover;
     background-repeat: no-repeat;
     height: 40vh;
+    transition: 0.25s;
 }
 
 .contact .background {
@@ -411,11 +438,15 @@ footer button:hover {
 }
 
 .cars .background {
-    background-image: url('/assets/images/miso.JPG');
+    background-image: url('/assets/images/leasing.png');
 }
 
 .car .background {
-    background-image: url('/assets/images/miso.JPG');
+    background-image: url('/assets/images/leasing.png');
+}
+
+.background.bignav {
+    height: 100vh;
 }
 
 @media screen and (max-width: 812px) {
@@ -551,6 +582,10 @@ footer button:hover {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
     }
+
+    svg {
+        display: inline;
+    }
 }
 
 /* LEASING */
@@ -680,7 +715,7 @@ footer button:hover {
 
     .leasing .options h3 {
         font-size: 14px;
-        padding: 15px;
+        padding: 15px 5px;
         width: 33%;
     }
 
@@ -810,11 +845,15 @@ footer button:hover {
     .cars main .carGrid {
         grid-template-columns: 1fr;
     }
+
+    .cars main {
+        transform: translateY(-75px);
+    }
 }
 
 @media screen and (min-width: 813px) and (max-width: 1200px) {
     .cars main .carGrid {
-        grid-template-columns: 1fr 1FR;
+        grid-template-columns: 1fr 1fr;
     }
 }
 

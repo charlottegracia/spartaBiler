@@ -7,6 +7,7 @@ if(document.querySelector('.frontpage')) {
     header.style.left = "0";
     header.style.top = "0";
     header.style.zIndex = "2";
+    header.style.width = "100%";
 }
 
 function header() {
@@ -35,7 +36,7 @@ function header() {
                 <div class="nav-fade-in dropdownMobile">
                     <ul id="navMobile">
                         <li>
-                            <a href="index.html">Home</a>
+                            <a href="index.html">Forside</a>
                         </li>
                         <li>
                             <a href="leasing.html">Leasing</a>
@@ -46,6 +47,14 @@ function header() {
                         <li>
                             <a href="kontakt.html">Kontakt</a>
                         </li>
+                        <section class="headericons">
+                            <a href="https://www.facebook.com/Spartabiler.dk" target="_blank">
+                                <img src="/assets/images/facebook.png" alt="Sparta Biler Facebook"> <!-- flaticon: https://www.flaticon.com/premium-icon/facebook_2504903 -->
+                            </a>
+                            <a href="https://www.instagram.com/spartabiler" target="_blank">
+                                <img src="/assets/images/instagram.png" alt="Sparta Biler Instagram"> <!-- flaticon: https://www.flaticon.com/free-icon/instagram_2111463 -->
+                            </a>
+                        </section>
                     </ul>
                 </div>
             </nav>
@@ -56,21 +65,30 @@ function header() {
 function dropdownMobile() {
     if (document.getElementById("navMobile").style.display === "block") {
         document.getElementById("navMobile").style.display = "none";
-        document.querySelector('main').style.display = "flex";
-        document.querySelector('footer').style.display = "flex";
-        document.querySelector('nav ul li a').style.display = "block";
+        if(document.querySelector('.cars')) {
+            document.querySelector('main').style.display = "block";
+        } else {
+            document.querySelector('main').style.display = "flex";
+        }
+        if (document.querySelector('footer')) {
+            document.querySelector('footer').style.display = "flex";
+        }
+        document.querySelector('nav ul li a').style.display = "flex";
         document.getElementById("navIkon2").style.display = "none";
         document.getElementById("navIkon").style.display = "block";
         document.querySelector('.nav-fade-in').classList.remove('appear');
-
+        document.querySelector('.background').classList.remove('bignav');
     } else {
         document.getElementById("navMobile").style.display = "block";
         document.querySelector('main').style.display = "none";
-        document.querySelector('footer').style.display = "none";
+        if (document.querySelector('footer')) {
+            document.querySelector('footer').style.display = "none";
+        }
         document.querySelector('nav ul li a').style.display = "none";
         document.getElementById("navIkon2").style.display = "block";
         document.getElementById("navIkon").style.display = "none";
         document.querySelector('.nav-fade-in').classList.add('appear');
+        document.querySelector('.background').classList.add('bignav');
     }
 }
 
