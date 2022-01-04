@@ -110,7 +110,36 @@ function footer() {
 window.onscroll = function() {onScrollChecks()};
 		
 function onScrollChecks() {
-    let illustration2 = document.querySelector('#illustration2');
+    if(document.getElementById('illustration1')) {
+        let illustration1 = document.querySelector('#illustration1');
+        if(window.pageYOffset >= illustration1.offsetTop ) {
+            let tmpX = 1*(window.pageYOffset-illustration1.offsetTop);
+            if(tmpX >= 10) {
+                illustration1.style.transform="translateX("+ tmpX + "px)";
+            }
+        }
+    }
+
+    if(document.getElementById('illustration2')) {
+        let illustration2 = document.querySelector('#illustration2');
+        if(window.pageYOffset >= illustration2.offsetTop ) {
+            let tmpX = 1*(window.pageYOffset-illustration2.offsetTop);
+            if(tmpX >= 10) {
+                illustration2.style.transform="translateX("+ tmpX + "px)";
+            }
+        }
+    }
+
+    if(document.getElementById('illustration3')) {
+        let illustration3 = document.querySelector('#illustration3');
+        if(window.pageYOffset >= illustration3.offsetTop ) {
+            let tmpX = 1*(window.pageYOffset-illustration3.offsetTop);
+            if(tmpX >= 10) {
+                illustration3.style.transform="translateX("+ tmpX + "px)";
+            }
+        }
+    }
+
     if(document.getElementById('illustration4')) {
         let illustration4 = document.querySelector('#illustration4');
         if(window.pageYOffset >= illustration4.offsetTop - (illustration4.offsetHeight*2) ) {
@@ -120,14 +149,6 @@ function onScrollChecks() {
             }
         }
     }
-        
-
-      /*   if(window.pageYOffset >= illustration2.offsetTop - (illustration2.offsetHeight*2) ) {
-            let tmpX = -1*(window.pageYOffset-illustration2.offsetTop);
-            if(tmpX >= 10) {
-                illustration2.style.transform="translateX("+ tmpX + "px)";
-            }
-        } */
 };
 
 function leasing(leasingtype) {

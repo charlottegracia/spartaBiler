@@ -279,8 +279,14 @@ header nav ul li a img {
 }
 
 /* SVG */
+#illustration1, #illustration2, #illustration3 {
+    width: 60vw;
+    position: relative;
+    transform: translateX(0vw);
+}
+
 #illustration4 {
-    width: 800px;
+    width: 55vw;
     padding-top: 50px;
     position: absolute;
     transform: translateX(50vw);
@@ -541,9 +547,9 @@ footer button:hover {
 
 .leasingGrid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 47% 47%;
     grid-template-rows: 1fr;
-    gap: 25px;
+    gap: 6%;
     line-height: 2;
 }
 
@@ -640,12 +646,6 @@ footer button:hover {
     object-fit: cover;
 }
 
-/* #illustration2 {
-    padding-top: 50px;
-    position: absolute;
-    transform: translateX(50vw);
-} */
-
 /* LEASING MEDIA QUERIES */
 
 @media screen and (max-width: 812px) {
@@ -712,7 +712,7 @@ footer button:hover {
     transition: 1s;
 }
 
-.cars main .carGrid {
+.cars main .carGrid { 
     margin: 25px 0;
     max-width: 1600px;
     display: grid;
