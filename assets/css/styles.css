@@ -58,7 +58,6 @@ main {
 header {
     margin: 0;
     padding: 0;
-    height: 60px;
     width: 100%;
     display: block;
     background: var(--lowOpacityWhite);
@@ -68,7 +67,8 @@ header {
 }
 
 header nav {
-    margin: 0 80px;
+    margin: 0;
+    padding: 0px 80px;
 }
 
 header nav ul {
@@ -84,7 +84,7 @@ header nav ul li {
 }
 
 header nav ul li a img {
-    width: 15vw;
+    width: 20%;
 }
 
 .navFlex {
@@ -95,11 +95,11 @@ header nav ul li a img {
 }
 
 .navFlex a {
-    margin-left: 5vw;
+    margin-left: 0;
     text-decoration: none;
     text-transform: uppercase;
     color: var(--blue);
-    font-weight: 900;
+    font-weight: bold;
 }
 
 .navFlex a:hover {
@@ -141,7 +141,22 @@ header nav ul li a img {
     main {
         margin: 50px 50px;
     }
+
+    header nav {
+        margin: 20px;
+    }
+
+    header ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 45%;
+    }
     
+    header nav ul li a img {
+        width: 100%;
+    }
+
     .navFlex {
         display: none;
     }
@@ -350,11 +365,14 @@ footer button:hover {
 }
 
 @media screen and (max-width: 812px) {
+    footer .flex section:nth-child(1) {grid-area: 2;}
+    footer .flex section:nth-child(2) {grid-area: 1;}
+    footer .flex section:nth-child(3) {grid-area: 3;}
+
     footer .flex {
-        justify-content: space-evenly;
-        align-items: baseline;
-        padding: 10px 0 20px 0;
-        flex-direction: column;
+        padding: 25px 40px;
+        display: grid;
+        gap: 25px;
     }
 
     footer .icons img {
@@ -362,20 +380,12 @@ footer button:hover {
     }
 
     footer .flex section:nth-child(even) {
-        font-size: 16px;
-        width: 250px;
+        font-size: 18px;
     }
 
     footer p {
-        font-size: 20px;
-    }
-    
-    footer .flex section {
-        align-items: baseline;
-    }
-
-    footer .flex section:nth-child(even) {
-        text-align: left;
+        font-size: 18px;
+        margin: 0;
     }
 }
 
@@ -505,10 +515,9 @@ footer button:hover {
 
 
 /* KONTAKT MEDIA QUERIES */
-
 @media screen and (max-width: 812px) {
     .contact main {
-        margin: 50px 50px;
+        margin: 25px 25px;
         gap: 25px;
         display: flex;
         flex-direction: column-reverse;
@@ -516,6 +525,21 @@ footer button:hover {
 
     svg {
         display: none;
+    }
+
+    .owners {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .owners section {
+        text-align: center;
+        align-items: center;
+    }
+
+    .owners section h2 {
+        font-size: 20px;
     }
 }
 
@@ -526,13 +550,6 @@ footer button:hover {
         gap: 25px;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr;
-    }
-
-    .owners {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
-        gap: 50px;
     }
 }
 

@@ -56,8 +56,8 @@ function header() {
 function dropdownMobile() {
     if (document.getElementById("navMobile").style.display === "block") {
         document.getElementById("navMobile").style.display = "none";
-        document.querySelector('main').style.display = "block";
-        document.querySelector('footer').style.display = "block";
+        document.querySelector('main').style.display = "flex";
+        document.querySelector('footer').style.display = "flex";
         document.querySelector('nav ul li a').style.display = "block";
         document.getElementById("navIkon2").style.display = "none";
         document.getElementById("navIkon").style.display = "block";
