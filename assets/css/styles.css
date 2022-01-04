@@ -270,6 +270,7 @@ footer .flex {
     background-color: var(--grey);
     color: var(--blue);
     padding: 10px 0 20px 0;
+    /* flex-direction: column; */
 }
 
 footer .flex section {
@@ -341,7 +342,7 @@ footer button:hover {
 }
 
 /* CONTACT */
-.contact main {
+.contact main { /* IDA */
     margin: 50px 100px;
     display: grid;
     gap: 25px;
@@ -431,7 +432,7 @@ footer button:hover {
     gap: 25px;
 }
 
-.leasingGrid {
+.leasingGrid { /* IDA */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
@@ -562,7 +563,7 @@ footer button:hover {
     transition: 1s;
 }
 
-.cars main .carGrid {
+.cars main .carGrid { /*IDA*/
     margin: 25px 0;
     max-width: 1600px;
     display: grid;
@@ -669,7 +670,7 @@ footer button:hover {
     margin-top: 0;
 }
 
-.car main .grid {
+.car main .grid { /*IDA*/
     display: grid;
     gap: 25px 25px;
     grid-template-columns: 1fr 1fr;
