@@ -665,6 +665,10 @@ footer button:hover {
     margin-bottom: 10px;
 }
 
+.car h4:nth-child(1) {
+    margin-top: 0;
+}
+
 .car main .grid {
     display: grid;
     gap: 25px 25px;
