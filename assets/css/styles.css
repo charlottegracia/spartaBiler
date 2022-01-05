@@ -194,6 +194,10 @@ header nav ul li a img {
         display: none;
     }
 
+    header.height {
+        height: 100vh;
+    }
+
     #navMobile {
         display: none;
     }
@@ -201,6 +205,11 @@ header nav ul li a img {
     #navIkon {
         font-size: 25px;
         display: block;
+        padding: 0 20px 0 50px;
+    }
+
+    #navIkon2 {
+        padding: 0 20px 0 50px;
     }
  
     header nav ul li a img {
@@ -213,6 +222,14 @@ header nav ul li a img {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .dropdownMobile {
+        font-size: 40px;
+    }
+
+    .dropdownMobile li {
+        padding: 50px 0 50px 0;
     }
 
 }
@@ -319,8 +336,31 @@ header nav ul li a img {
 
 @media screen and (min-width: 813px) and (max-width: 1200px) {
     .frontpage .icons {
-        left: 70vw;
+        left: 60vw;
     }
+
+    .frontpage h1 {
+        font-size: 9vw;
+    }
+    
+    .frontpage p {
+        font-size: 30px;
+        width: 70vw;
+    }
+
+    .frontpage button {
+        font-size: 30px;
+    }
+
+    .frontpage .icons img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .frontpage .icons {
+        font-size: 60px;
+    }
+    
 }
 
 /* SVG */
@@ -417,10 +457,6 @@ footer button:hover {
         font-size: 18px;
         margin: 0;
     }
-}
-
-@media screen and (min-width: 813px) and (max-width: 1200px) {
-
 }
 
 /* BACKGROUND */
@@ -594,9 +630,17 @@ footer button:hover {
         grid-template-rows: 1fr;
     }
 
-    svg {
-        display: inline;
+    #illustration4 {
+        width: 90vw;
+        padding-top: 50px;
+        position: absolute;
+        transform: translateX(0);
     }
+
+    .owners section h2 {
+        font-size: 20px;
+    }
+    
 }
 
 /* LEASING */
@@ -664,7 +708,7 @@ footer button:hover {
 
 .leasing .options h3 {
     margin: 0;
-    font-size: 16px;
+    font-size: 18px;
     padding: 40px;
     width: 33%;
     background-color: var(--darkred);
@@ -739,10 +783,14 @@ footer button:hover {
 @media screen and (min-width: 813px) and (max-width: 1200px) {
     .leasingGrid {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 47% 47%;
         grid-template-rows: 1fr;
-        gap: 25px;
+        gap: 6%;
         line-height: 2;
+    }
+
+    .leasing .options h3 {
+        font-size: 20px;
     }
 }
 
