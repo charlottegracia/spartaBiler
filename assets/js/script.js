@@ -72,12 +72,17 @@ function dropdownMobile() {
         }
         if (document.querySelector('footer')) {
             document.querySelector('footer').style.display = "flex";
+            document.querySelector('footer').style.flexDirection = "column";
         }
         document.querySelector('nav ul li a').style.display = "flex";
         document.getElementById("navIkon2").style.display = "none";
         document.getElementById("navIkon").style.display = "block";
         document.querySelector('.nav-fade-in').classList.remove('appear');
-        document.querySelector('.background').classList.remove('bignav');
+        //document.querySelector('.background').classList.remove('bignav');
+        document.querySelector('.background').classList.remove('backgroundheight');
+        document.querySelector('header').classList.remove('height');
+
+
     } else {
         document.getElementById("navMobile").style.display = "block";
         document.querySelector('main').style.display = "none";
@@ -88,7 +93,15 @@ function dropdownMobile() {
         document.getElementById("navIkon2").style.display = "block";
         document.getElementById("navIkon").style.display = "none";
         document.querySelector('.nav-fade-in').classList.add('appear');
-        document.querySelector('.background').classList.add('bignav');
+        // document.querySelector('.background').classList.add('bignav');
+        //document.getElementById("myDIV").classList.toggle("mystyle");
+        document.querySelector('header').classList.add('height');
+        if (document.querySelector('.frontpage')) {
+            document.querySelector('.frontpage').classList.add('background');
+            document.querySelector('.background').classList.add('backgroundheight');
+        } else {
+            document.querySelector('.background').classList.add('backgroundheight');
+        }
     }
 }
 
