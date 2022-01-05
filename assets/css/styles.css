@@ -58,6 +58,12 @@ main {
 
 header {
     background: var(--lowOpacityWhite);
+    position: fixed;
+    height: 8vh;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 100%;
 }
 
 header nav ul {
@@ -840,6 +846,7 @@ footer button:hover {
     background-color: var(--white);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     border-radius: 5px;
+    transition: 0.5s;
 }
 
 .cars main .carGrid .carBox:hover {

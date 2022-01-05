@@ -1,15 +1,6 @@
 header();
 footer();
 
-if(document.querySelector('.frontpage')) {
-    let header = document.querySelector('header');
-    header.style.position = "fixed";
-    header.style.left = "0";
-    header.style.top = "0";
-    header.style.zIndex = "2";
-    header.style.width = "100%";
-}
-
 function header() {
     let text = `
             <nav class="bold">
