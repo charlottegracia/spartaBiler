@@ -101,9 +101,11 @@ function footer() {
     <section class="flex">
         <section>
             <a href="tel:61464685"> 
-            <p class="bold">Tlf. <span class="robotobold">61 46 46 85</span></p>
+                <p class="bold">Tlf. <span class="robotobold">61 46 46 85</span></p>
             </a>
-            <a href="mailto:info@spartabiler.dk"><p>info@spartabiler.dk</p></a>
+            <a href="mailto:info@spartabiler.dk">
+                <p>info@spartabiler.dk</p>
+            </a>
         </section>
         <section>
             <h2 class="bold">Skriv til os og hør, hvad vi kan tilbyde</h2>
