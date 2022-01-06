@@ -441,6 +441,11 @@ footer button:hover {
     background-color: var(--red);
 }
 
+footer a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
 @media screen and (max-width: 812px) {
     footer .flex section:nth-child(1) {grid-area: 2;}
     footer .flex section:nth-child(2) {grid-area: 1;}
@@ -816,19 +821,23 @@ footer button:hover {
 .cars .options {
     display: flex;
     flex-direction: row;
+    align-items: center;
     border-radius: 10px;
     text-align: center;
     background-color: var(--darkred);
+    justify-content: space-evenly;
 }
 
 .cars .options select {
     margin: 20px;
     font-size: 16px;
-    padding: 10px 30px;
+    padding: 10px 20px;
     background-color: var(--white);
     color: var(--blue);
     border-radius: 10px;
     transition: 1s;
+    height: 50px;
+    width: 100%;
 }
 
 .cars main .carGrid { 
@@ -907,6 +916,23 @@ footer button:hover {
     font-weight: bold;
 }
 
+.filterbutton {
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: bold;
+    padding: 20px 50px;
+    margin: 30px 20px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.filterbutton:hover {
+    background-color: var(--white);
+    color: var(--blue);
+}
+
 /* CARS MEDIA QUERIES */
 
 @media screen and (max-width: 812px) {
@@ -917,12 +943,45 @@ footer button:hover {
     .cars main {
         transform: translateY(-75px);
     }
+
+    .cars .options {
+        flex-direction: column;
+    }
+
+    .cars .options select {
+        width: 75%;
+        margin: 2% 0;
+    }
+
+    .cars .options select:nth-child(1) {
+        margin-top: 30px;
+    }
+
+    .filterbutton {
+        margin: 10px 0 20px 0;
+    }
 }
 
 @media screen and (min-width: 813px) and (max-width: 1200px) {
     .cars main .carGrid {
         grid-template-columns: 1fr 1fr;
     }
+
+    .cars .options {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .cars .options select {
+        margin: 0;
+    }
+
+    .filterbutton {
+        margin: 0;
+    }
+    
 }
 
 /* CAR */
