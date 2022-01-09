@@ -1,5 +1,6 @@
 header();
 footer();
+setInterval(checkPage, 100);
 
 function header() {
     let text = `
@@ -11,13 +12,13 @@ function header() {
                         </a>
                     </li>
                     <section class="navFlex">
-                        <li>
+                        <li class="leasinglink">
                             <a href="leasing.html">Leasing</a>
                         </li>
-                        <li>
+                        <li class="bilerpaalagerlink">
                             <a href="biler.html">Biler på lager</a>
                         </li>
-                        <li>
+                        <li class="kontaktlink">
                             <a href="kontakt.html">Kontakt</a>
                         </li>
                     </section>
@@ -221,3 +222,14 @@ function showDivs(n) {
 }
 
 /* KODE OVENFOR ER FRA W3SCHOOLS. Kilde: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_self */
+
+function checkPage() {
+    const url = window.location.href;
+    if (url.indexOf('leasing') > -1) {
+        document.querySelector('.leasinglink a').style.borderBottom = "1px solid var(--blue)";
+    } else if (url.indexOf('biler-pa-lager') > -1) {
+        document.querySelector('.bilerpaalagerlink a').style.borderBottom = "1px solid var(--blue)";
+    } else if (url.indexOf('kontakt') > -1) {
+        document.querySelector('.kontaktlink a').style.borderBottom = "1px solid var(--blue)";
+    }
+}
