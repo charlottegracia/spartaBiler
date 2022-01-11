@@ -224,13 +224,15 @@ function showDivs(n, knap) {
     if (x.length > 0) {
         x[slideIndex-1].style.display = "block";  
     }
-    setTimeout(() => {
-        document.querySelector('.knap1').style.animation = "none";
-        document.querySelector('.knap2').style.animation = "none";
-    }, 100)
+    if(document.querySelector('.knap1')) {
+        setTimeout(() => {
+            document.querySelector('.knap1').style.animation = "none";
+            document.querySelector('.knap2').style.animation = "none";
+        }, 100)
+    }
 }
 
-/* KODE OVENFOR (UNDTAGEN LINJE 209-213 OG 227-230) ER FRA W3SCHOOLS. Kilde: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_self */
+/* KODE OVENFOR (UNDTAGEN LINJE 209-213 OG 227-232) ER FRA W3SCHOOLS. Kilde: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_self */
 
 function checkPage() {
     const url = window.location.href;
