@@ -16,7 +16,7 @@ function header() {
                             <a href="leasing.html">Leasing</a>
                         </li>
                         <li class="bilerpaalagerlink">
-                            <a href="biler.html">Biler på lager</a>
+                            <a href="biler-pa-lager.html">Biler på lager</a>
                         </li>
                         <li class="kontaktlink">
                             <a href="kontakt.html">Kontakt</a>
@@ -196,16 +196,21 @@ function leasing(leasingtype) {
     }
 }
 
-/* KODE NEDENFOR ER FRA W3SCHOOLS. Kilde: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_self */
+/* KODE NEDENFOR (UNDTAGEN LINJE 209-213 OG 227-230) ER FRA W3SCHOOLS. Kilde: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_self */
 var slideIndex = 1;
 showDivs(slideIndex);
 
-function plusDivs(n) {
-    showDivs(slideIndex += n);
+function plusDivs(n, knap) {
+    showDivs(slideIndex += n, knap);
 }
 
-function showDivs(n) {
+function showDivs(n, knap) {
     var i;
+    if (knap == 'knap1') {
+        document.querySelector('.knap1').style.animation = "slideshowbutton 0.2s";
+    } else if (knap == 'knap2') {
+        document.querySelector('.knap2').style.animation = "slideshowbutton 0.2s";
+    }
     var x = document.getElementsByClassName("mySlides");
     if (n > x.length) {
         slideIndex = 1
@@ -219,17 +224,21 @@ function showDivs(n) {
     if (x.length > 0) {
         x[slideIndex-1].style.display = "block";  
     }
+    setTimeout(() => {
+        document.querySelector('.knap1').style.animation = "none";
+        document.querySelector('.knap2').style.animation = "none";
+    }, 100)
 }
 
-/* KODE OVENFOR ER FRA W3SCHOOLS. Kilde: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_self */
+/* KODE OVENFOR (UNDTAGEN LINJE 209-213 OG 227-230) ER FRA W3SCHOOLS. Kilde: https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_self */
 
 function checkPage() {
     const url = window.location.href;
     if (url.indexOf('leasing') > -1) {
-        document.querySelector('.leasinglink a').style.borderBottom = "1px solid var(--blue)";
+        document.querySelector('.leasinglink a').style.color = "var(--darkred)";
     } else if (url.indexOf('biler-pa-lager') > -1) {
-        document.querySelector('.bilerpaalagerlink a').style.borderBottom = "1px solid var(--blue)";
+        document.querySelector('.bilerpaalagerlink a').style.color = "var(--darkred)";
     } else if (url.indexOf('kontakt') > -1) {
-        document.querySelector('.kontaktlink a').style.borderBottom = "1px solid var(--blue)";
+        document.querySelector('.kontaktlink a').style.color = "var(--darkred)";
     }
 }
